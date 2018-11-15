@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.be.www.exampleproject.ui.main.MainActivity">
+    <!--popupTheme避免控制菜单背景颜色，避免黑底黑字情况-->
+    <!--ThemeOverlay.AppCompat.Light/Dark-->
+    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+    <!--有其他要求的可以自己定义-->
+    <!--app:contentInsetStart="0dp"可以控制左侧的padding距离-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:subtitleTextAppearance="@style/ToolbarTitle"
+        app:subtitleTextColor="@color/white"
+        app:theme="@style/ToolbarTheme"
+        android:background="@color/colorPrimaryDark"
+        app:titleTextAppearance="@style/ToolbarTitle"
+        app:titleTextColor="@color/white">
+    </android.support.v7.widget.Toolbar>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/holo_green_dark" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

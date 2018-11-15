@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/dark_blue">
+    <item android:drawable="@color/blue"/>
+    <!--有边界限制的水波,只能在规定范围内显示水波动画,范围边界由mask遮罩对象指定-->
+    <!--<item android:id="@android:id/mask" android:drawable="@drawable/ic_launcher_foreground"/>-->
+</ripple>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/main_set"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Set"
+        app:showAsAction="never"
+        tools:ignore="AppCompat" />
+    <item
+        android:id="@+id/main_change"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Change"
+        app:showAsAction="never"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/main_Search"
+        android:title="Search"
+        app:showAsAction="always"
+        tools:ignore="AppCompatResource" />
+</menu>

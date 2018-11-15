@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ActivityTheme" parent="BaseActivityTheme">
+        <!--状态栏颜色-->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <!--支持转场动画-->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">false</item>
+    </style>
+</resources>
