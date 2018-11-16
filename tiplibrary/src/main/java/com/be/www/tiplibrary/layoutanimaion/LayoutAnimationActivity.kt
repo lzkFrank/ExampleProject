@@ -1,12 +1,12 @@
-package com.be.www.tiplibrary
+package com.be.www.tiplibrary.layoutanimaion
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class TipMainActivity : AppCompatActivity() {
+class LayoutAnimationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tip_main)
+        setContentView(R.layout.activity_layout_animation)
     }
 }
