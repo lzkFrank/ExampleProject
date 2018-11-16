@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tip_main_rv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.be.www.tiplibrary.TipMainActivity">
-
-</android.support.constraint.ConstraintLayout>
+    android:layoutAnimation="@anim/layout_child_anim2"
+    tools:context="com.be.www.tiplibrary.main.TipMainActivity" />

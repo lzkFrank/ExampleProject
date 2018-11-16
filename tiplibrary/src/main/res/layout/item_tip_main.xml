@@ -6,10 +6,6 @@
     android:clickable="true"
     android:fontFamily="sans-serif-medium"
     android:foreground="?attr/selectableItemBackgroundBorderless"
-    android:background="@drawable/item_blue_selector"
+    android:background="@android:color/holo_blue_dark"
     android:gravity="center"
     android:textSize="17sp" />
-    <!--android:background="?attr/selectableItemBackgroundBorderless"-->
-    <!--android:background="@drawable/item_blue_selector"-->
-    <!--android:background="?attr/selectableItemBackground"-->
-    <!--android:foreground="?attr/selectableItemBackgroundBorderless"-->

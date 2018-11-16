@@ -24,9 +24,9 @@ class MainAdapter(var mDatas: List<String>) : RecyclerView.Adapter<RecyclerView.
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         var itemHolder: ItemHolder = holder as ItemHolder
         itemHolder.itemTv.text = mDatas[position]
-//        itemHolder.itemTv.setOnClickListener {
-//            listener?.onItemClickListener(position)
-//        }
+        itemHolder.itemTv.setOnClickListener {
+            listener?.onItemClickListener(position)
+        }
     }
 
     class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -8,7 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.be.www.exampleproject.R
-import com.be.www.tiplibrary.TipMainActivity
+import com.be.www.tiplibrary.main.TipMainActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var toolbar: Toolbar

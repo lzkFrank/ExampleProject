@@ -3,7 +3,8 @@
     package="com.be.www.tiplibrary">
 
     <application>
-        <activity android:name=".TipMainActivity"></activity>
+        <activity android:name=".main.TipMainActivity" />
+        <activity android:name=".layoutanimaion.LayoutAnimationActivity"></activity>
     </application>
 
 </manifest>
