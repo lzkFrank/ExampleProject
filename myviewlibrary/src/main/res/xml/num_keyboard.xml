@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<code xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ResourceName">
+    <Keyboard
+        android:horizontalGap="5dp"
+        android:keyWidth="23.5%"
+        android:keyHeight="50dp"
+        android:verticalGap="5dp">
+        <Row>
+            <Key
+                android:codes="49"
+                android:keyLabel="1"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="50"
+                android:keyLabel="2"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="51"
+                android:keyLabel="3"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="-5"
+                android:isRepeatable="true"
+                android:keyHeight="50dp"
+                android:keyIcon="@drawable/ic_launcher_background"/>
+        </Row>
+
+        <Row>
+            <Key
+                android:codes="52"
+                android:keyLabel="4"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="53"
+                android:keyLabel="5"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="54"
+                android:keyLabel="6"
+                android:keyHeight="50dp"/>
+            <!--<Key-->
+                <!--android:codes="45"-->
+                <!--android:keyLabel="-"-->
+                <!--android:keyHeight="50dp"/>-->
+
+            <Key
+                android:codes="9997"
+                android:keyHeight="160dp"
+                android:keyEdgeFlags="right"
+                android:keyLabel="OK"/>
+        </Row>
+
+        <Row>
+            <Key
+                android:codes="55"
+                android:keyLabel="7"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="56"
+                android:keyLabel="8"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="57"
+                android:keyLabel="9"
+                android:keyHeight="50dp"/>
+
+            <!--<Key-->
+                <!--android:codes="9997"-->
+                <!--android:keyHeight="105dp"-->
+                <!--android:keyEdgeFlags="right"-->
+                <!--android:keyLabel="@string/confirm"/>-->
+        </Row>
+
+        <Row>
+            <Key
+                android:codes="46"
+                android:keyLabel="."
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="48"
+                android:keyLabel="0"
+                android:keyHeight="50dp"/>
+            <Key
+                android:codes="9990"
+                android:keyLabel="00"
+                android:keyHeight="50dp"/>
+        </Row>
+    </Keyboard>
+    
+</code>
+
+

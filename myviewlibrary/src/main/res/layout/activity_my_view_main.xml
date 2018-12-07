@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.be.www.myviewlibrary.MyViewMainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mv_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/mv_toolbar"
+        android:id="@+id/mv_edit"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <!--<android.support.v7.app.AlertController.RecycleListView-->
+        <!--android:id="@+id/mv_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/mv_toolbar" />-->
+
+</android.support.constraint.ConstraintLayout>

@@ -2,6 +2,14 @@
 
 buildscript {
     ext.kotlin_version = '1.2.41'
+    ext.deps = [
+
+            'junit' : "junit:junit:$JUNIT_VERSION",
+            'kotlin': [
+                    'kgp'        : "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}",
+                    'kotlin_jdk7': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KOTLIN_VERSION}"
+            ]
+    ]
     repositories {
         google()
         jcenter()

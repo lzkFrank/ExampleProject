@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.be.www.exampleproject.R
+import com.be.www.myviewlibrary.MyViewMainActivity
 import com.be.www.tiplibrary.main.TipMainActivity
 
 class MainActivity : AppCompatActivity() {
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             override fun onItemClickListener(position: Int) {
                 when (position) {
                     0 -> startActivity(Intent(this@MainActivity, TipMainActivity::class.java))
-                    1 -> Toast.makeText(this@MainActivity, "开发中", Toast.LENGTH_SHORT).show()
+                    1 -> startActivity(Intent(this@MainActivity, MyViewMainActivity::class.java))
                 }
             }
         })
