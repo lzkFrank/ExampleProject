@@ -1,16 +1,15 @@
-package com.be.www.exampleproject.ui.main
+package com.be.www.myviewlibrary
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.be.www.exampleproject.R
 
 /**
  * Created by frankliu on 2018/11/15.
  */
-class MainAdapter(var mDatas: List<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ListAdapter(var mDatas: List<String>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     lateinit var listener: OnItemClickListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

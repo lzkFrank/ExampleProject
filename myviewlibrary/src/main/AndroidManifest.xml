@@ -3,7 +3,10 @@
     package="com.be.www.myviewlibrary">
 
     <application>
-        <activity android:name=".MyViewMainActivity"></activity>
+        <activity
+            android:name=".MyViewMainActivity"
+            android:theme="@style/ActivityTheme" />
+        <activity android:name=".key.KeyboardActivity" />
     </application>
 
 </manifest>

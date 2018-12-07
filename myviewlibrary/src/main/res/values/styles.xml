@@ -1,0 +1,34 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BaseActivityTheme" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorPrimary">@android:color/holo_green_dark</item>
+        <item name="android:textColorPrimaryInverse">@android:color/holo_red_dark</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ActivityTheme" parent="BaseActivityTheme">
+
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
+        <item name="actionMenuTextColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ToolbarPopupTheme" parent="ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">#ffffff</item>
+    </style>
+</resources>

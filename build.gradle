@@ -4,10 +4,17 @@ buildscript {
     ext.kotlin_version = '1.2.41'
     ext.deps = [
 
-            'junit' : "junit:junit:$JUNIT_VERSION",
-            'kotlin': [
+            'junit'  : "junit:junit:$JUNIT_VERSION",
+            'kotlin' : [
                     'kgp'        : "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}",
                     'kotlin_jdk7': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KOTLIN_VERSION}"
+            ],
+            'support': [
+                    'appcompat' : "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}",
+                    'constraint': "com.android.support.constraint:constraint-layout:${CONSTRAINT_LAYOUT_VERSION}",
+                    'design'    : "com.android.support:design:${SUPPORT_LIBRARY_VERSION}",
+                    'runner'    : "com.android.support.test:runner:${RUNNER_VERSION}",
+                    'espresso'  : "com.android.support.test.espresso:espresso-core:${ESPRESSO_CORE_VERSION}"
             ]
     ]
     repositories {
