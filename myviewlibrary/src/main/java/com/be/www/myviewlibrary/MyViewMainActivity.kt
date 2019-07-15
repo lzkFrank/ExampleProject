@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.*
 import android.view.MenuItem
-import com.be.www.myviewlibrary.key.KeyboardActivity
+import com.be.www.myviewlibrary.list.KeyboardActivity
+import com.be.www.myviewlibrary.list.NumWhellActivity
 
 /**
  * -                   .::::.
@@ -41,18 +42,21 @@ class MyViewMainActivity : AppCompatActivity() {
     }
 
     private fun initToolbar() {
-        var toolbar:Toolbar = findViewById(R.id.mv_toolbar)
+        var toolbar: Toolbar = findViewById(R.id.mv_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
+
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             android.R.id.home -> finish()
         }
         return super.onOptionsItemSelected(item)
     }
+
     private fun initList() {
-        var datas = listOf("自定义键盘")
+        var datas = listOf("自定义键盘",
+                "滚动的textView")
 
         val rv = findViewById<RecyclerView>(R.id.mv_list)
         rv.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
@@ -69,7 +73,7 @@ class MyViewMainActivity : AppCompatActivity() {
             override fun onItemClickListener(position: Int) {
                 when (position) {
                     0 -> startActivity(Intent(this@MyViewMainActivity, KeyboardActivity::class.java))
-                    1 -> startActivity(Intent(this@MyViewMainActivity, MyViewMainActivity::class.java))
+                    1 -> startActivity(Intent(this@MyViewMainActivity, NumWhellActivity::class.java))
                 }
             }
         })
