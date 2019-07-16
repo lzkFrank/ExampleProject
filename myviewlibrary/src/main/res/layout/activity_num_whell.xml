@@ -9,8 +9,12 @@
     <com.be.www.myviewlibrary.wheel.NumWheelView
         android:id="@+id/wheel"
         android:layout_width="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:fontFamily="sans-serif"
+        app:duration="1000"
+        app:text_size="100dp"
+        app:text_color="@color/main_bg"
         android:background="@color/blue" />
 </FrameLayout>

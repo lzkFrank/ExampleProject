@@ -36,7 +36,7 @@ class CharPlotterImp(var mContext: Context) : CharPlotter() {
     private val TAG = "CharPlotterImp"
     private val FIDUCIAL = "8"
 
-    private val paddings = floatArrayOf(0.5f.Ndp2px(), 5f.Ndp2px(), 0.5f.Ndp2px(), 5f.Ndp2px())
+    private val paddings = floatArrayOf(0.5f.Ndp2px(), 5f.Ndp2px(), 1f.Ndp2px(), 5f.Ndp2px())
     private val center = floatArrayOf(0f, 0f)
     private val mTextBounds = Rect()
 

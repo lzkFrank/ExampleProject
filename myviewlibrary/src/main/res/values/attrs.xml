@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text_size" format="dimension"/>
+    <attr name="text_color" format="color" />
+    <attr name="duration" format="integer"/>
+    <declare-styleable name="NumWheelView">
+        <attr name="text_size" />
+        <attr name="text_color" />
+        <attr name="fontFamily" />
+        <attr name="duration" />
+    </declare-styleable>
+</resources>

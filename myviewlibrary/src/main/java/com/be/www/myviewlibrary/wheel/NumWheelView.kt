@@ -2,18 +2,20 @@ package com.be.www.myviewlibrary.wheel
 
 import android.animation.ValueAnimator
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Typeface
+import android.os.Build
+import android.support.annotation.IntDef
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.view.animation.DecelerateInterpolator
-import java.lang.Exception
+import com.be.www.myviewlibrary.R
 import java.math.BigDecimal
-import kotlin.IllegalArgumentException
 
 /***
  *                     .::::.
@@ -42,22 +44,53 @@ import kotlin.IllegalArgumentException
 class NumWheelView : View {
     private val mSeq = charArrayOf('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')
     private val DOT = "."
-    private val duration = 200L
     private var plotters = mutableListOf<CharPlotter>()
-
     private var mAnimator: ValueAnimator? = null
+
     private val mPaint: Paint by lazy { Paint() }
     private var mWidthMeasureSpec: Int? = null
     private var mHeightMeasureSpec: Int? = null
 
+    private var mTypeface = Typeface.DEFAULT
+    private var mTextColor = ContextCompat.getColor(context, android.R.color.black)
+    private var mTextSize = 15f.Ndp2px()
+    private var mDuration = 1000
+
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+        initAttrs(attrs)
+        initPaint()
+    }
 
-    init {
-        mPaint.typeface = Typeface.DEFAULT
-        mPaint.textSize = 15f.Ndp2px()
-        mPaint.color = ContextCompat.getColor(context, android.R.color.black)
+    private fun initAttrs(attrs: AttributeSet?) {
+        attrs ?: return
+        val ta = context.obtainStyledAttributes(attrs, R.styleable.NumWheelView)
+        for (i in 0 until ta.indexCount) {
+            val attr = ta.getIndex(i)
+            when (attr) {
+                R.styleable.NumWheelView_fontFamily -> getFont(ta, attr)
+                R.styleable.NumWheelView_text_color -> mTextColor = ta.getColor(attr, mTextColor)
+                R.styleable.NumWheelView_text_size -> mTextSize = ta.getDimension(attr, mTextSize)
+                R.styleable.NumWheelView_duration -> mDuration = ta.getInteger(attr, mDuration)
+            }
+        }
+        ta.recycle()
+    }
+
+    private fun getFont(ta: TypedArray, attr: Int) {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
+            mTypeface = ta.getFont(attr)
+        }
+        if (mTypeface == null) {
+            mTypeface = Typeface.DEFAULT
+        }
+    }
+
+    private fun initPaint() {
+        mPaint.typeface = mTypeface
+        mPaint.textSize = mTextSize
+        mPaint.color = mTextColor
     }
 
     @Throws(IllegalArgumentException::class)
@@ -139,7 +172,7 @@ class NumWheelView : View {
         if (mAnimator == null) {
             mAnimator = ValueAnimator.ofFloat(0f, count.toFloat())
             mAnimator?.let {
-                it.duration = duration
+                it.duration = mDuration.toLong()
                 it.interpolator = DecelerateInterpolator()
                 it.addUpdateListener { a ->
                     val k = a.animatedValue as Float
@@ -210,7 +243,14 @@ class NumWheelView : View {
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         canvas ?: return
-        plotters.forEach { it.draw(canvas) }
+        plotters.forEach {
+            it.draw(canvas)
+        }
+    }
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        mAnimator?.cancel()
     }
 
     private fun isNumber(c: Char) = mSeq.contains(c)
