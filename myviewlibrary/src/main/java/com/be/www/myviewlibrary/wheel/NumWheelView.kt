@@ -100,6 +100,10 @@ class NumWheelView : View {
         initData(start, end)
         resetWH()
 
+        initAnimator()
+    }
+
+    private fun initAnimator() {
         val plotter = plotters.maxBy { it.getTotalCount() }
         if (plotter == null) {
             start(10)
