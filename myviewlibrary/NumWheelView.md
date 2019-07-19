@@ -1,7 +1,7 @@
 # 轮转切换数字的View
 ### 控件效果展示
 
-![效果图](https://github.com/lzkFrank/BlogsUtils/blob/master/NumWheelView.gif?raw=true)
+![效果图](https://raw.githubusercontent.com/lzkFrank/BlogsUtils/master/NumWheelView.gif)
 
 ### 控件使用
 控件的使用非常简单，只需要在布局中引入控件
