@@ -9,12 +9,13 @@ import com.be.www.myviewlibrary.R
 import kotlinx.android.synthetic.main.activity_num_whell.*
 
 class NumWhellActivity : AppCompatActivity() {
-    private var delay = 5*1000L
+    private var delay = 300L
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_num_whell)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setData()
+        TextView(this).text
     }
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
@@ -23,8 +24,9 @@ class NumWhellActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
     private fun setData() {
-        wheel.setText("1234.3345", "22.32")
+        wheel.setText("1234.3345", "4522.432")
         Handler().postDelayed({
+            delay*=2
             setData()
         }, delay)
     }

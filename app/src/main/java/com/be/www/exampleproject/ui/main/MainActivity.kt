@@ -24,19 +24,21 @@ class MainActivity : AppCompatActivity() {
     private fun initToolbar() {
         toolbar = findViewById(R.id.main_toolbar)
         setSupportActionBar(toolbar)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.subtitle = "目录"
+
         // toolbar.setNavigationIcon(R.drawable.abc_ab_share_pack_mtrl_alpha)
         // toolbar.inflateMenu(R.menu.main_menu)
     }
 
     private fun initRv() {
-        var datas = listOf("小知识点", "自定义view")
+        val datas = listOf("小知识点", "自定义view")
 
         val rv = findViewById<RecyclerView>(R.id.main_rv)
         rv.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
-        var divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
 //        divider.setDrawable(resources.getDrawable(R.drawable.ic_launcher_background));
         rv.addItemDecoration(divider)
 
@@ -64,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.getItemId()) {
+        when (item?.itemId) {
             android.R.id.home -> finish()
             R.id.main_set -> Toast.makeText(this@MainActivity, "Set", Toast.LENGTH_SHORT).show()
             R.id.main_change -> Toast.makeText(this@MainActivity, "Change", Toast.LENGTH_SHORT).show()

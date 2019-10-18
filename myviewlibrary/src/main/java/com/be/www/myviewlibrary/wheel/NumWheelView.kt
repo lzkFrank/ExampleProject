@@ -91,6 +91,7 @@ class NumWheelView : View {
         mPaint.typeface = mTypeface
         mPaint.textSize = mTextSize
         mPaint.color = mTextColor
+        mPaint.isAntiAlias=true
     }
 
     @Throws(IllegalArgumentException::class)

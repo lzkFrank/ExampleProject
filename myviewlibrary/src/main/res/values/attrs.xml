@@ -9,4 +9,6 @@
         <attr name="fontFamily" />
         <attr name="duration" />
     </declare-styleable>
+    <declare-styleable name="PieView">
+    </declare-styleable>
 </resources>

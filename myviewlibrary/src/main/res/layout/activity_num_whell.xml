@@ -13,8 +13,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         app:fontFamily="sans-serif"
-        app:duration="1000"
-        app:text_size="100dp"
+        app:duration="300"
+        app:text_size="14dp"
         app:text_color="@color/main_bg"
         android:background="@color/blue" />
 </FrameLayout>

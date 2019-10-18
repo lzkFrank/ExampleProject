@@ -33,8 +33,10 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Handler().postDelayed({ startActivity(Intent(this@SplashActivity, MainActivity::class.java)) }
-                , 1500L)
+        Handler().postDelayed(
+                { startActivity(Intent(this@SplashActivity, MainActivity::class.java)) }
+                , 1500L
+        )
     }
 
     /**
